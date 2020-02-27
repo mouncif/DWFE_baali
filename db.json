@@ -1,0 +1,54 @@
+{
+   "produit":[
+       {
+           "id":1,
+           "nom":"watch",
+           "nom court":"wt",
+           "prix de base":"2000",
+           "prix de vente":"1000",
+           "seuil max de remise":"500",
+           "unite":"",
+           "image":"",
+           "quantité initila":""
+
+
+
+
+       }
+   ],
+
+
+
+   "fournisseurs":[
+       {
+       "id":2,
+       "nom":"",
+       "nom court":"",
+       "ville":"",
+       "adresse":"",
+       "tel fix":"",
+       "tel mobile":"",
+       "fax":"",
+       "adresse email":""
+
+
+       }
+   ],
+
+
+   "client":[
+    {
+    "id":4,
+    "nom":"",
+    "prenom":"",
+    "statut":"",
+    "photo":"",
+    "telephone":"",
+    "email":"",
+    "adresse":"",
+    "ville":""
+
+    }
+]
+
+}
