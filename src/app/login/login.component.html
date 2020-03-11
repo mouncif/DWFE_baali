@@ -8,17 +8,19 @@
         <mat-icon matBadge="22" matBadgePosition="above after">add_alert</mat-icon>
         
         </mat-toolbar>
+        
+                
 
-        <form [formGroup]="login.form" class="normal-form" (submit)="onLogin()">
+        <form [formGroup]="login.form" class="example-forme" style="margin-right: 50px" (submit)="onLogin()">
                 <mat-grid-list cols="1" rowHeight="300px">
                     <mat-grid-tile>
                         <div class="controles-container">
                             <input type="hidden" formControlName="id">
-                            <mat-form-field>
+                            <mat-form-field class="example-full-widthe">
                                 <input formControlName="email" matInput placeholder="Email*">
                                 <mat-error>This field is mandatory.</mat-error>
                             </mat-form-field>
-                            <mat-form-field class="displayB">
+                            <mat-form-field class="example-full-widthe">
                                     <input formControlName="password" type="password" matInput placeholder="Password *">
                                     <mat-error *ngIf="login.form.controls['password'].errors?.required">This field is mandatory.</mat-error>
                                     <mat-error *ngIf="login.form.controls['password'].errors?.minlength">Minimum 8 charactors neede d.
