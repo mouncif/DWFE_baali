@@ -1,10 +1,9 @@
 
-   
 <mat-toolbar>
     
     <span>SmartVentes</span>
     <span class="fill-remaining-space"></span>
-
+    <mat-icon class="C" svgIcon="thumb-up"></mat-icon>
     <mat-icon matBadge="22" matBadgePosition="above after" style="margin-right: 10px">settings</mat-icon>
     <mat-icon matBadge="22" matBadgePosition="above after">add_alert</mat-icon>
     
@@ -13,7 +12,7 @@
       <mat-drawer mode="side" opened>
         <mat-nav-list>
            <a mat-list-item routerLink="/dossierr" routerLinkActive="active-list-item" ><mat-icon style="margin-right: 10px">folder  </mat-icon>  Dossier</a>
-          
+           
           <a mat-list-item routerLink="/settings" routerLinkActive="active-list-item"><mat-icon style="margin-right: 10px">assignment</mat-icon>Planning</a>
           <a mat-list-item routerLink="/about" routerLinkActive="active-list-item"><mat-icon style="margin-right: 10px">subtitles</mat-icon>Caisse</a>
         </mat-nav-list>
@@ -22,17 +21,16 @@
         
         <mat-toolbar color=primary>
     
-          <span>Dossier Produit</span>
+          <span>Dossier Fournisseur</span>
           <span class="fill-remaining-space"></span>
-          
+          <mat-icon class="C" svgIcon="thumb-up"></mat-icon>
           <mat-icon matBadge="22" matBadgePosition="above after">search</mat-icon>
           
           
           </mat-toolbar>
-          
           <mat-toolbar >
             <div class=spacer>
-                <a mat-button routerLink="/ajouterpro">Fiche Produit</a>
+                <a mat-button routerLink="/fournisseurs">Fiche Fournisseur</a>
             <a mat-button >Document</a>
             <a mat-button>Facture</a>
             <a mat-button>Visit</a>
@@ -41,27 +39,9 @@
               
             </div>
               
-              </mat-toolbar>
-
-              
-
+        </mat-toolbar>
+        
+      </mat-drawer-content>
+    </mat-drawer-container>
     
-                                            
-    
-    
-                                              
-                                      
-                                 
-                  
-                   
-                  
-              
-                </mat-drawer-content>
-              </mat-drawer-container>
-          
-      
-    
-
-             
-    
-    <router-outlet></router-outlet>
+       <router-outlet></router-outlet>

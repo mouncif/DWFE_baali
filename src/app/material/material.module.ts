@@ -20,6 +20,8 @@ import * as Material from"@angular/material";
     Material.MatButtonModule,
     Material.MatTableModule,
     Material.MatIconModule,
+    Material.MatSidenavModule,
+    Material.MatTableModule
     
   ],
   exports:[
@@ -34,7 +36,8 @@ import * as Material from"@angular/material";
     Material.MatNativeDateModule,
     Material.MatButtonModule,
     Material.MatTableModule,
-    Material.MatIconModule
+    Material.MatIconModule,
+    Material.MatSidenavModule
   ]
 })
 export class MaterialModule { }

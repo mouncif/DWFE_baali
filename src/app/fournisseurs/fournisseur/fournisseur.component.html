@@ -1,3 +1,4 @@
+
 <mat-toolbar>
     
     <span>SmartVentes</span>
@@ -23,7 +24,7 @@
         
         <mat-toolbar color=primary>
     
-          <span>Administrateur</span>
+          <span>Dossier Fournisseur</span>
           <span class="fill-remaining-space"></span>
           
           <mat-icon matBadge="22" matBadgePosition="above after">search</mat-icon>
@@ -33,7 +34,7 @@
           
           <mat-toolbar >
             <div class=spacer>
-                <a mat-button routerLink="/fourniss">Fiche Produit</a>
+                <a mat-button routerLink="/fournisseurs">Fiche Fournisseur</a>
             <a mat-button >Document</a>
             <a mat-button>Facture</a>
             <a mat-button>Visit</a>
@@ -46,15 +47,15 @@
 
               <mat-card>
                     <mat-card-content>
-                      <h2 class="example-h2">Fiche Produit</h2>
+                      <h2 class="example-h2">Fiche Fournisseur</h2>
                   
                       
-                      <form [formGroup]="Group.form" class="normal-form" (submit)="onSubmit()">
-                              <mat-grid-list cols="3" rowHeight="300px">
+                      <form [formGroup]="myGroup.form" class="normal-form" (submit)="onSubmit()">
+                              <mat-grid-list cols="2" rowHeight="300px">
                                   <mat-grid-tile>
                                       <div class="controles-container">
-                                       
-                                          <input type="hidden" formControlName="id">
+                                        <input type="hidden" formControlName="id">
+                                          
                                           
 
 
@@ -74,61 +75,76 @@
 
 
 
+                                              
+                                             
+    
     
                                           <mat-form-field>
-                                              <input formControlName="prixdebase" matInput placeholder="Prix de base">
+                                              <input formControlName="adresseemail" matInput placeholder="Email">
+                                              <mat-error>Invalid email address.</mat-error>
                                           </mat-form-field>
                                           
+    
+    
                                           <mat-form-field>
-                                            <input formControlName="prixdevente" matInput placeholder="Prix de vente">
-                                        </mat-form-field>
+                                              <input formControlName="ville" matInput placeholder="Ville">
+                                          </mat-form-field>
+                                          <mat-form-field>
+                                                  <input formControlName="telephone" matInput placeholder="Téléphone*">
+                                                  <mat-error *ngIf="myGroup.form.controls['telephone'].errors?.required">This field is mandatory.</mat-error>
+                                                  <mat-error *ngIf="myGroup.form.controls['telephone'].errors?.minlength">Minimum 8 charactors neede d.
+                                                  </mat-error>
+                                              </mat-form-field>
 
-                                  
-                                        
+
+                                              
+
+
+
+
+
+
+
+
+    
+                                            
+    
+    
                                               
                                       </div>
                                   </mat-grid-tile>
                                   
                                   <mat-grid-tile>
                                       <div class="controles-container">
-                                          <mat-form-field>
-                                              <input formControlName="seuilmax" matInput placeholder="Seuil max de remise">
-                                          </mat-form-field>
-
-                                          <mat-form-field>
-                                              <input formControlName="unite" matInput placeholder="Unité du produit">
-                                          </mat-form-field>
-                                          <mat-form-field>
-                                            <input formControlName="quantite" matInput placeholder="Quantité">
-                                        </mat-form-field>       
-                                        
-                                        
-
-
-
-
-                                        </div>
-                                      </mat-grid-tile>
-          
-
-                                      <mat-grid-tile>
-                                          <div class="controles-container">
-                                       
-
-
-                                          <mat-form-field>
-                                            <input formControlName="image" matInput placeholder="Image">
-                                        </mat-form-field>
-
+                                          
                                         <mat-form-field>
-                                            <input formControlName="description" matInput placeholder="Déscription">
-                                        </mat-form-field>    
+                                          <input formControlName="telfix" matInput placeholder="Téléphone Fix*">
+                                          <mat-error *ngIf="myGroup.form.controls['telfix'].errors?.required">This field is mandatory.</mat-error>
+                                          <mat-error *ngIf="myGroup.form.controls['telfix'].errors?.minlength">Minimum 8 charactors neede d.
+                                          </mat-error>
+                                      </mat-form-field>
+                                         
+                                      <mat-form-field>
+                                        <input formControlName="fax" matInput placeholder="Fax*">
+                                        <mat-error *ngIf="myGroup.form.controls['fax'].errors?.required">This field is mandatory.</mat-error>
+                                        <mat-error *ngIf="myGroup.form.controls['fax'].errors?.minlength">Minimum 8 charactors neede d.
+                                        </mat-error>
+                                    </mat-form-field>
 
 
-                                            
+                                    <mat-form-field>
+                                      <input formControlName="adresse" matInput placeholder="Adresse">
+                                    
+                                  </mat-form-field>
+
+
+
+
+
+
 
                                           <div class="button-row">
-                                            <button mat-raised-button color="primary" type="submit" >Submit</button>
+                                            <button mat-raised-button color="primary" type="submit"  >Submit</button>
                                               <button mat-raised-button color="warn" (click)="onClear()">Clear</button>
                                           </div>
                                       </div>

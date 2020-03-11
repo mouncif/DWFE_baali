@@ -1,0 +1,131 @@
+
+<mat-toolbar>
+    
+    <span>SmartVentes</span>
+    <span class="fill-remaining-space"></span>
+    <a mat-button routerLink="/loginn">Déconnexion</a>
+    <mat-icon matBadge="22" matBadgePosition="above after" style="margin-right: 10px">settings</mat-icon>
+    <mat-icon matBadge="22" matBadgePosition="above after">add_alert</mat-icon>
+    
+    </mat-toolbar>
+    <mat-drawer-container class="example-container">
+      <mat-drawer mode="side" opened>
+        <mat-nav-list>
+            <a mat-list-item routerLink="/login" routerLinkActive="active-list-item" ><mat-icon style="margin-right: 10px">folder</mat-icon>Dossier</a>
+            <a mat-list-item routerLink="/list" routerLinkActive="active-list-item"><mat-icon style="margin-right: 10px">subtitles</mat-icon>Liste Clients</a>
+            <a mat-list-item routerLink="/listfor" routerLinkActive="active-list-item"><mat-icon style="margin-right: 10px">subtitles</mat-icon>Liste Fournisseur</a>
+            <a mat-list-item routerLink="/listpro" routerLinkActive="active-list-item"><mat-icon style="margin-right: 10px">subtitles</mat-icon>Liste Produits</a>
+            <a mat-list-item routerLink="/listutil" routerLinkActive="active-list-item"><mat-icon style="margin-right: 10px">subtitles</mat-icon>Liste Utilisateurs</a>
+           <a mat-list-item routerLink="/settings" routerLinkActive="active-list-item"><mat-icon style="margin-right: 10px">assignment</mat-icon>Planning</a>
+           <a mat-list-item routerLink="/about" routerLinkActive="active-list-item"><mat-icon style="margin-right: 10px">subtitles</mat-icon>Caisse</a>
+        </mat-nav-list>
+      </mat-drawer>
+      <mat-drawer-content>
+        
+        <mat-toolbar color=primary>
+    
+          <span>Administrateur</span>
+          
+          <span class="fill-remaining-space"></span>
+          
+          <mat-icon matBadge="22" matBadgePosition="above after">search</mat-icon>
+          
+          
+          </mat-toolbar>
+          <mat-toolbar >
+            <div class=spacer>
+                <a mat-button routerLink="/dossier">Fiche Client</a>
+            <a mat-button >Document</a>
+            <a mat-button>Facture</a>
+            <a mat-button>Visit</a>
+  
+             
+              
+            </div>
+              
+              </mat-toolbar>
+
+              
+
+
+              <mat-card>
+                  <mat-card-content>
+                    <h2 class="example-h2">Fiche Client</h2>
+                
+                    
+                    <form [formGroup]="service.form" class="normal-form" (submit)="onSubmit()">
+                            <mat-grid-list cols="2" rowHeight="300px">
+                                <mat-grid-tile>
+                                    <div class="controles-container">
+                                        <input type="hidden" formControlName="id">
+                                        <mat-form-field>
+                                            <input formControlName="nom" matInput placeholder="Nom*">
+                                            <mat-error>This field is mandatory.</mat-error>
+                                        </mat-form-field>
+                                        <mat-form-field>
+                                                <input formControlName="prenom" matInput placeholder="Prenom*">
+                                                <mat-error>This field is mandatory.</mat-error>
+                                            </mat-form-field>
+                                        <mat-form-field>
+                                            <input formControlName="email" matInput placeholder="Email">
+                                            <mat-error>Invalid email address.</mat-error>
+                                        </mat-form-field>
+                                        
+
+
+                                        <mat-form-field>
+                                            <input formControlName="ville" matInput placeholder="Ville">
+                                        </mat-form-field>
+                                        <mat-form-field>
+                                                <input formControlName="telephone" matInput placeholder="Téléphone*">
+                                                <mat-error *ngIf="service.form.controls['telephone'].errors?.required">This field is mandatory.</mat-error>
+                                                <mat-error *ngIf="service.form.controls['telephone'].errors?.minlength">Minimum 8 charactors neede d.
+                                                </mat-error>
+                                            </mat-form-field>
+                                    </div>
+                                </mat-grid-tile>
+                                
+                                <mat-grid-tile>
+                                    <div class="controles-container">
+                                        
+                                        <mat-form-field>
+                                            <mat-select formControlName="statut" placeholder="Statut">
+                                                <mat-option>None</mat-option>
+                                                <ng-container *ngFor="let statut of statuts">
+                                                    <mat-option value="{{statut.id}}">{{statut.value}}</mat-option>
+                                                </ng-container>
+                                            </mat-select>
+                                        </mat-form-field>
+                                        <mat-form-field>
+                                            <input formControlName="datedebut" matInput [matDatepicker]="picker" placeholder="Date de debut">
+                                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                            <mat-datepicker #picker></mat-datepicker>
+                                        </mat-form-field>
+                                       
+                                       
+                                        <div class="button-row">
+                                            <button mat-raised-button color="primary" type="submit" [disabled]="service.form.invalid" >Submit</button>
+                                            <button mat-raised-button color="warn" (click)="onClear()">Clear</button>
+                                        </div>
+                                    </div>
+                                </mat-grid-tile>
+                            </mat-grid-list>
+                            
+                        </form>
+
+                
+                   
+                  </mat-card-content>
+                </mat-card>
+                
+                
+
+
+
+
+
+        
+            </mat-drawer-content>
+        </mat-drawer-container>
+    
+    <router-outlet></router-outlet>

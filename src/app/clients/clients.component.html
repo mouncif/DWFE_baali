@@ -1,0 +1,116 @@
+<mat-toolbar>
+    
+    <span>SmartVentes</span>
+    <span class="fill-remaining-space"></span>
+    <mat-icon class="C" svgIcon="thumb-up"></mat-icon>
+    <mat-icon matBadge="22" matBadgePosition="above after" style="margin-right: 10px">settings</mat-icon>
+    <mat-icon matBadge="22" matBadgePosition="above after">add_alert</mat-icon>
+    
+    </mat-toolbar>
+    <mat-drawer-container class="example-container">
+      <mat-drawer mode="side" opened>
+        <mat-nav-list>
+           <a mat-list-item routerLink="/fournisseur" routerLinkActive="active-list-item" ><mat-icon style="margin-right: 10px">folder</mat-icon>Dossier</a>
+           
+          <a mat-list-item routerLink="/settings" routerLinkActive="active-list-item"><mat-icon style="margin-right: 10px">assignment</mat-icon>Planning</a>
+          <a mat-list-item routerLink="/about" routerLinkActive="active-list-item"><mat-icon style="margin-right: 10px">subtitles</mat-icon>Caisse</a>
+        </mat-nav-list>
+      </mat-drawer>
+      <mat-drawer-content>
+        
+        <mat-toolbar color=primary>
+    
+          <span>Dossier Client</span>
+          <span class="fill-remaining-space"></span>
+          <mat-icon class="C" svgIcon="thumb-up"></mat-icon>
+          <mat-icon matBadge="22" matBadgePosition="above after">search</mat-icon>
+          
+          
+          </mat-toolbar>
+          <mat-toolbar >
+            <div class=spacer>
+                <a mat-button routerLink="/dossier">Fiche Client</a>
+            <a mat-button >Document</a>
+            <a mat-button>Facture</a>
+            <a mat-button>Visit</a>
+  
+             
+              
+            </div>
+              
+        </mat-toolbar>
+
+       
+
+
+
+
+
+
+
+
+        <mat-card class="example-card">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>Shiba Inu</mat-card-title>
+              <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+            <mat-card-content>
+              <p>
+                The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                bred for hunting.
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button>LIKE</button>
+              <button mat-button>SHARE</button>
+            </mat-card-actions>
+          </mat-card>
+
+
+
+
+
+
+
+
+          <mat-card class="example-card">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>Shiba Inu</mat-card-title>
+                <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+              </mat-card-header>
+              <img mat-card-image src="/images/swatch.jpg" alt="Photo of a Shiba Inu">
+              <mat-card-content>
+                <p>
+                  The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                  A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                  bred for hunting.
+                </p>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-button>LIKE</button>
+                <button mat-button>SHARE</button>
+              </mat-card-actions>
+            </mat-card>
+
+
+          
+
+                   
+
+
+
+
+
+
+
+
+
+        
+      </mat-drawer-content>
+    </mat-drawer-container>
+    
+       <router-outlet></router-outlet>

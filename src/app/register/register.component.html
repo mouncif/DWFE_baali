@@ -1,0 +1,64 @@
+<mat-toolbar>
+
+    <span>SmartVentes</span>
+    <span class="fill-remaining-space"></span>
+
+    <mat-icon matBadge="22" matBadgePosition="above after" style="margin-right: 10px">settings</mat-icon>
+    <mat-icon matBadge="22" matBadgePosition="above after">add_alert</mat-icon>
+
+</mat-toolbar>
+<form [formGroup]="register.form" class="normal-form" (submit)="onRegister()">
+    <mat-grid-list cols="2" rowHeight="300px">
+        <mat-grid-tile>
+            <div class="controles-container">
+               
+
+                <mat-form-field>
+                    <input formControlName="nom" matInput placeholder="Nom*">
+                    <mat-error>This field is mandatory.</mat-error>
+                </mat-form-field>
+
+                <mat-form-field>
+                    <input formControlName="prenom" matInput placeholder="Prénom*">
+                    <mat-error>This field is mandatory.</mat-error>
+                </mat-form-field>
+
+                <mat-form-field>
+                    <input formControlName="profil" matInput placeholder="Profil*">
+                    <mat-error>This field is mandatory.</mat-error>
+                </mat-form-field>
+
+
+
+            </div>
+        </mat-grid-tile>
+        
+        <mat-grid-tile>
+            <div class="controles-container">
+                <mat-form-field>
+                    <input formControlName="email" matInput placeholder="Email*">
+                    <mat-error>This field is mandatory.</mat-error>
+                </mat-form-field>
+
+                <mat-form-field>
+                    <input formControlName="image" matInput placeholder="Image*">
+                    <mat-error>This field is mandatory.</mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="displayB">
+                    <input formControlName="password" type="password" matInput placeholder="Password *">
+                    <mat-error *ngIf="register.form.controls['password'].errors?.required">This field is mandatory.
+                    </mat-error>
+                    <mat-error *ngIf="register.form.controls['password'].errors?.minlength">Minimum 8 charactors neede
+                        d.
+                    </mat-error>
+                </mat-form-field>
+                <div class="button-row">
+                    <button mat-raised-button color="primary" type="submit" [disabled]="register.form.invalid">Submit</button>
+                    <button mat-raised-button color="warn" (click)="onClear()">Clear</button>
+                    <a style="float: right;" mat-raised-button [routerLink]="['/loginn']">Login</a>
+                </div>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+</form>
