@@ -5,6 +5,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Project Structur
+
+![structure](https://github.com/Anasse-BL/BAALIANASSE_ExamenDWFrontEnd20/blob/master/Screenshot_1.png)
 
 ## Code scaffolding
 
