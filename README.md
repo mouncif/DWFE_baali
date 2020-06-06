@@ -5,9 +5,40 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Technologies Used
+
+- Angular
+- AngularMaterial
+- Json-Server
+
+
 ## Project Structur
 
 ![structure](https://github.com/Anasse-BL/BAALIANASSE_ExamenDWFrontEnd20/blob/master/Screenshot_1.png)
+
+## ScreenShots
+
+![structure](https://github.com/Anasse-BL/ScreenShots/blob/master/login.png)
+
+![srtucture](https://github.com/Anasse-BL/ScreenShots/blob/master/inscription.png)
+
+![srtucture](https://github.com/Anasse-BL/ScreenShots/blob/master/admin.png)
+
+![srtucture](https://github.com/Anasse-BL/ScreenShots/blob/master/ajouter_un_client.png)
+
+![srtucture](https://github.com/Anasse-BL/ScreenShots/blob/master/ajouter_un_produit.png)
+
+![srtucture](https://github.com/Anasse-BL/ScreenShots/blob/master/ajouter_un_fournisseur.png)
+
+![srtucture](https://github.com/Anasse-BL/ScreenShots/blob/master/listes_clients.png)
+
+![srtucture](https://github.com/Anasse-BL/ScreenShots/blob/master/listes_produits.png)
+
+![srtucture](https://github.com/Anasse-BL/ScreenShots/blob/master/listes_fournisseurs.png)
+
+![srtucture](https://github.com/Anasse-BL/ScreenShots/blob/master/listes_utilisateurs.png)
+
 
 ## Code scaffolding
 
